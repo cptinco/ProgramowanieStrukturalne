@@ -6,18 +6,19 @@ int** f(int n, int m)
     int **tab=malloc(n*sizeof(int*));
     for(int i=0;i<n;i++)
     {
-        *(tab+i)=malloc(m*sizeof(int*));
+        *(tab+i)=malloc(m*sizeof(int));
     }
     return tab;
 }
 
 int main()
 {
+    printf("%d",sizeof(int));
     int**tablica=f(3,4); //stworzenie tablicy
     **tablica=0; //ustawienie wartosci w miejsce 0,0
     *(*(tablica+2))=7;  //ustawienie wartosci w miejsce 2,0
     *(*(tablica+2)+1)=8;  //ustawienie wartosci w miejsce 2,1
-    *(*tablica+1)=-2;  //ustawienie wartosci w miejsce 0,1
+    *(*tablica+3)=-2;  //ustawienie wartosci w miejsce 0,1
     //pêtla by sprawdziæ co jest w tablicy i jakie s¹ adres
     for(int i=0;i<3;i++)
     {
