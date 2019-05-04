@@ -12,9 +12,20 @@ struct element * utworz()
     return NULL;
 };
 
+void wyczysc(struct element *Lista)
+{
+    struct element * wsk=Lista;
+    while(Lista!=NULL)
+    {
+        Lista=Lista->next;
+        free(wsk);
+        wsk=Lista;
+    }
+}
+
 int main()
 {
     struct element* example = utworz();
-    printf("%p",&example);
+    wyczysc(example);
     return 0;
 }
