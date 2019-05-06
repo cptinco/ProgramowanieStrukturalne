@@ -17,7 +17,6 @@ struct element * utworz()
 struct element* dodajk(struct element*Lista, int a)
 {
     struct element * wsk ;
-    if(Lista==NULL)
     while(wsk->next!=NULL)
     {
         wsk=wsk->next;
