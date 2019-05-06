@@ -64,7 +64,7 @@ void wczytaj(struct daneosobowe tablica[], int n)
 
 int main()
 {
-    struct daneosobowe tablica[1];
-    wczytaj(tablica,1);
+    struct daneosobowe tablica[2];
+    wczytaj(tablica,2);
     return 0;
 }
