@@ -14,7 +14,7 @@ struct element * utworz()
     return wskaznik;
 };
 
-void dodajk(struct element*Lista, int a)
+struct element* dodajk(struct element*Lista, int a)
 {
     struct element * wsk ;
     while(wsk->next!=NULL)
@@ -27,10 +27,20 @@ void dodajk(struct element*Lista, int a)
     wsk->next=NULL;
 };
 
+void dodajw(struct element*Lista, struct element*elem, int a)
+{
+    struct element*wsk=malloc(sizeof(struct element));
+    wsk->i=a;
+    wsk->next=elem->next;
+    elem->next=wsk;
+};
+
 int main()
 {
     struct element* l1 = utworz();
     dodajk(l1,2);
     dodajk(l1,3);
+    dodajw(l1,l1->next,5);
+    printf("%d",l1->next->next->i);
     return 0;
 }
