@@ -31,7 +31,6 @@ int main()
     while(wsk!=NULL)
     {
         printf("%d\n",wsk->i);
-        printf("%p\n",wsk);
         wsk=wsk->next;
     }
     return 0;

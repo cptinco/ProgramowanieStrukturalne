@@ -34,7 +34,6 @@ int main()
     {
         wsk=wsk->next;
         printf("%d\n",wsk->i);
-        printf("%p\n",wsk);
     }
     return 0;
 }
