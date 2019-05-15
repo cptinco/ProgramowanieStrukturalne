@@ -27,5 +27,14 @@ int main()
     struct element* l1 = utworz();
     dodaj(l1,2);
     dodaj(l1,4);
+    dodaj(l1,-8);
+    dodaj(l1,-22);
+    struct element * wsk = l1;
+    while(wsk->next!=NULL)
+    {
+        wsk=wsk->next;
+        printf("%d\n",wsk->i);
+        printf("%p\n",wsk);
+    }
     return 0;
 }

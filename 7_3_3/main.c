@@ -23,7 +23,16 @@ struct element * utworz()
 int main()
 {
     struct element* l1 = utworz();
-    struct element* l2 = dodaj(l1,2);
-    struct element* l3 = dodaj(l2,4);
+    l1 = dodaj(l1,2);
+    l1 = dodaj(l1,4);
+    l1 = dodaj(l1,7);
+    l1 = dodaj(l1,-2);
+    struct element * wsk = l1;
+    while(wsk!=NULL)
+    {
+        printf("%d\n",wsk->i);
+        printf("%p\n",wsk);
+        wsk=wsk->next;
+    }
     return 0;
 }
